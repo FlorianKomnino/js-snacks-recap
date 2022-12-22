@@ -16,7 +16,9 @@ main {
 }
 
 h1 {
-    color: red;
+    text-align: center;
+    color: green;
+    font-size: 2rem;
 }
 
 .headingAccountsColor {
@@ -95,25 +97,12 @@ div.singleMessageReceived div.CustomDropdown {
     display: none;
 }
 
-.accountInfos {
-    height: 100%;
-}
-
-.accountDimensioning {
-    height: 55px;
-    width: 100%;
-}
-
 .singleMessageReceived {
     width: 40%;
     border-radius: 5px;
     margin: 10px auto 10px 10px;
     padding: 7.5px;
     background-color: #ffffff;
-}
-
-.hiddenContact {
-    display: none!important;
 }
 
 .singleMessageSent {
@@ -134,8 +123,9 @@ div.singleMessageReceived div.CustomDropdown {
 }
 
 #messagesArea {
-    height: 600px;
+    height: 500px;
     background-image: url("../img/mine.jpg");
+    padding-bottom: 80px;
 }
 
 #messagesInput {
