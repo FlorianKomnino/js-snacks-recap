@@ -1,0 +1,148 @@
+body {
+    background-color: #dadbd3;
+}
+
+header {
+    background-color: #009688;
+    height: 125px;
+}
+
+main {
+    background-color: white;
+    position: absolute;
+    top: 4vh;
+    left: 10vw;
+    width: 80vw;
+}
+
+h1 {
+    color: red;
+}
+
+.headingAccountsColor {
+    background-color: #eaeaea;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    border-top: 1px solid #dddddd;
+    list-style-type: none;
+}
+
+img {
+    height: 100%;
+    object-fit: cover;
+}
+
+figure {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+div.input-group.input-group-sm {
+    width: calc(100% - 0.5rem);
+    margin: 0.25rem 0.25rem;
+}
+
+div.accountInfos p {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+div.accountSettings p {
+    font-size: 0.75rem;
+}
+
+div.singleMessageSent p,
+div.singleMessageReceived p {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    padding: 2px;
+    font-size: 0.6rem;
+    margin: 0;
+}
+
+div.singleMessageSent div.CustomDropdown,
+div.singleMessageReceived div.CustomDropdown {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 2px;
+    font-size: 0.6rem;
+    margin: 0;
+    cursor: pointer;
+}
+
+.displayObject {
+    display: inline-block!important;
+}
+
+.hideMessage {
+    display: none!important;
+}
+
+.custom-dropdown-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    z-index: 2;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
+    display: none;
+}
+
+.accountInfos {
+    height: 100%;
+}
+
+.accountDimensioning {
+    height: 55px;
+    width: 100%;
+}
+
+.singleMessageReceived {
+    width: 40%;
+    border-radius: 5px;
+    margin: 10px auto 10px 10px;
+    padding: 7.5px;
+    background-color: #ffffff;
+}
+
+.hiddenContact {
+    display: none!important;
+}
+
+.singleMessageSent {
+    width: 40%;
+    border-radius: 5px;
+    margin: 10px 10px 10px auto;
+    padding: 7.5px;
+    background-color: #d5f9ba;
+}
+
+.singleMessageSent,
+.singleMessageReceived {
+    padding-bottom: 20px;
+}
+
+#inputGroup-sizing-sm {
+    width: 80px;
+}
+
+#messagesArea {
+    height: 600px;
+    background-image: url("../img/mine.jpg");
+}
+
+#messagesInput {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #f3eeea;
+    bottom: 0;
+    left: 0;
+}
