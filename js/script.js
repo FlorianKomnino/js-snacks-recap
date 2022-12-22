@@ -5,7 +5,7 @@ const { createApp } = Vue;
 createApp ({
     data() {
         return {
-            message: 'Click this title to get a new random number!',
+            message: 'Clicca il bottone per generare un numero randomico!',
 
             subTitle: 'Il numero verrà automaticamente aggiunto al gruppo corretto',
 
@@ -17,10 +17,14 @@ createApp ({
     },
     
     methods: {
-        async getRandomNumber () {
+        async getRandomNumberAndPushIt () {
             await axios.get("https://flynn.boolean.careers/exercises/api/random/int")
             .then((response) => {
-                this.evenNumbers.push(response.data.response);
+                if(response.data.response % 2 == 0){
+                    this.evenNumbers.push(response.data.response);
+                } else {
+                    this.oddNumbers.push(response.data.response);
+                }
             });
         },
     },

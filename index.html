@@ -22,12 +22,22 @@
                     <div class="col-12">
                         <h1 class="text-center">{{ message }}</h1>
                     </div>
+                    <div class="col-12">
+                        <h1 class="text-center">{{ subTitle }}</h1>
+                    </div>
+                    <div class="col-12 text-center m-5">
+                        <div class="btn btn-primary" @click="getRandomNumberAndPushIt">Cliccami!</div>
+                    </div>
                     <div class="col-6 green-numbers">
                         <ul>
                             <li v-for="number in evenNumbers">{{number}}</li>
                         </ul>
                     </div>
-                    <div class="col-6 red-numbers"></div>
+                    <div class="col-6 red-numbers">
+                        <ul>
+                            <li v-for="number in oddNumbers">{{number}}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </main>
