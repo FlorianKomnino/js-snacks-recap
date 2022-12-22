@@ -47,7 +47,6 @@ createApp ({
         async getRandomSentence () {
             await axios.get("https://flynn.boolean.careers/exercises/api/random/sentence")
             .then((response) => {
-                this.randomSentenceFromResponse = response.data.response;
                 this.contacts[this.contactToShow].messages.push(
                     {
                         date: this.DateTime.now().toISO().replace('T', '  ').replaceAll('-', '/').slice(0, -10),
@@ -55,7 +54,7 @@ createApp ({
                         status: 'sent'
                     });
                     this.messageToAdd = '';
-                    setTimeout(this.receivedMessageAdder, 3000);
+                    setTimeout(this.receivedMessageAdder(response.data.response), 3000);
             });
         },
 
@@ -67,11 +66,11 @@ createApp ({
 
         },
 
-        receivedMessageAdder() {
+        receivedMessageAdder(textToAdd) {
             this.contacts[this.contactToShow].messages.push(
                 {
                     date: this.DateTime.now().toISO().replace('T', '  ').replaceAll('-', '/').slice(0, -10),
-                    message: this.randomSentenceFromResponse,
+                    message: textToAdd,
                     status: 'received'
                 });
         },
